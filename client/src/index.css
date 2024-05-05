@@ -1,3 +1,14 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+/* index.css */
+body {
+  /* Set the background image */
+  background-image: url("./assets/background-image.jpg");
+  /* Ensure the image covers the entire background */
+  background-size: cover;
+  /* Position the image at the center */
+  background-position: center;
+  min-height: 100vh;
+}

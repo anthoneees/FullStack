@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 
 function LandingPage() {
   return (
-    <div className="flex">
+    <div className="flex bg-black">
       <Navbar></Navbar>
     </div>
   );

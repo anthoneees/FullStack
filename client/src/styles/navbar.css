@@ -1,0 +1,22 @@
+.hover-underline-custom {
+  position: relative;
+  text-decoration: none;
+}
+
+.hover-underline-custom::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: calc(100% - 10px);
+  width: 0;
+  height: 3px;
+  background-color: #cc9a48;
+  transition:
+    width 0.3s ease,
+    left 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.hover-underline-custom:hover::after {
+  width: 75%;
+}
