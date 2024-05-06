@@ -4,7 +4,7 @@ import "../styles/styles.css";
 
 const Navbar = () => {
   return (
-    <header className="fixed top-0 left-0 w-full bg-transparent py-4 px-6 z-50">
+    <header className="fixed top-0 left-0 w-full bg-secondary py-4 px-6 z-50 shadow-lg opacity-90">
       <nav className="flex items-center justify-between">
         <div className="flex items-center">
           <a href="/" className="flex items-center justify-between font-bold">
@@ -19,7 +19,7 @@ const Navbar = () => {
           <li>
             <a
               href="/about"
-              className="text-white p-3 hover-underline-custom inter-custom"
+              className="text-white p-3 hover-underline-custom inter-custom text-xl"
             >
               About
             </a>
@@ -27,7 +27,7 @@ const Navbar = () => {
           <li>
             <a
               href="/events"
-              className="text-white p-3 hover-underline-custom inter-custom"
+              className="text-white p-3 hover-underline-custom inter-custom text-xl"
             >
               Events
             </a>
@@ -35,7 +35,7 @@ const Navbar = () => {
           <li>
             <a
               href="/calendar"
-              className="text-white p-3 hover-underline-custom inter-custom"
+              className="text-white p-3 hover-underline-custom inter-custom text-xl"
             >
               Calendar
             </a>

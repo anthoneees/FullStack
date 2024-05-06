@@ -9,7 +9,7 @@ import OpenForm from "./pages/OpenForm";
 
 function App() {
   return (
-    <div className="container">
+    <div className="container mx-auto">
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/events" element={<EventPage />} />
