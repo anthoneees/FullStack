@@ -2,13 +2,13 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import "../styles/styles.css";
-import SocialStackVertical from "../components/SocialStack";
+import SocialStack from "../components/SocialStack";
 
 function LandingPage() {
   return (
     <div className="flex items-center justify-center h-screen">
-      <Navbar methodType="NavbarMain" />
-      <SocialStackVertical />
+      <Navbar methodType="Main" />
+      <SocialStack methodType="Vertical" />
       <div className="bg-white h-2/6 w-1 absolute left-10 top-20 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]"></div>
       <div className="bg-white h-2/6 w-1 absolute left-10 bottom-4 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]"></div>
       <div className="flex flex-col text-center inter-custom">

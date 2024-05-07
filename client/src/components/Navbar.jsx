@@ -2,22 +2,23 @@
 import React from "react";
 import "../styles/navbar.css";
 import "../styles/styles.css";
+import SocialStack from './SocialStack'
 
 function Navbar({ methodType }) {
   const NavbarMain = () => {
     return (
       <div>
         <header className="fixed top-0 left-0 w-full bg-secondary py-4 px-6 z-50 shadow-lg opacity-90">
-          <nav className="flex items-center justify-between">
+          <nav className="flex items-center justify-between relative">
             <div className="flex items-center">
               <a
                 href="/"
-                className="flex items-center justify-between font-bold"
+                className="flex items-center justify-between font-bold relative"
               >
                 <img
                   src="./src/assets/logo192-gold.png"
                   alt="logo"
-                  className="h-8 mr-2"
+                  className="h-10 mr-2 top-0"
                 />
               </a>
             </div>
@@ -57,6 +58,7 @@ function Navbar({ methodType }) {
     return (
       <div>
         <header className="fixed top-0 left-0 w-full bg-secondary py-4 px-6 z-50 shadow-lg opacity-90">
+        <SocialStack methodType='Horizontal'/>
           <nav className="flex items-center justify-between">
             <div className="flex items-center">
               <a
@@ -66,7 +68,7 @@ function Navbar({ methodType }) {
                 <img
                   src="./src/assets/logo192-gold.png"
                   alt="logo"
-                  className="h-8 mr-2"
+                  className="h-10 mr-2"
                 />
               </a>
             </div>
@@ -104,8 +106,8 @@ function Navbar({ methodType }) {
 
   return (
     <div>
-      {methodType == "NavbarMain" ? NavbarMain() : null}
-      {methodType == "NavbarSide" ? NavbarSide() : null}
+      {methodType == "Main" ? NavbarMain() : null}
+      {methodType == "Side" ? NavbarSide() : null}
     </div>
   );
 }
