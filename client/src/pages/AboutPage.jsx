@@ -1,12 +1,9 @@
 import React from "react";
 import Navbar from "../components/Navbar";
+import "../styles/styles.css"
 
 function AboutPage() {
-  return (
-    <div className="flex items-center justify-center h-screen">
-      <Navbar methodType ="Side"/>
-    </div>
-  );
+  return <Navbar methodType="Side" />;
 }
 
 export default AboutPage;

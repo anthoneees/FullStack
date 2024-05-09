@@ -1,9 +1,11 @@
 import React from "react";
 
+//Function component that holds logos for social medias both vertical and horizontal layouts available.
 function SocialStack({ methodType }) {
+  //Vertical which lists socials vertically
   const SocialStackVertical = () => {
     return (
-      <div class="social-container">
+      <>
         <a
           href="https://www.instagram.com/gmumensclubvolleyball/"
           target="_blank"
@@ -12,13 +14,7 @@ function SocialStack({ methodType }) {
           <img
             src="./src/assets/instagram-icon.png"
             alt="Instagram"
-            style={{
-              marginTop: "1rem", // Equivalent to mt-4
-              width: "2rem", // Equivalent to w-8
-              position: "absolute",
-              left: "1.6rem", // Equivalent to left-7
-              bottom: "390px",
-            }}
+            className="h-10 ml-4"
           />
         </a>
         <a
@@ -29,13 +25,7 @@ function SocialStack({ methodType }) {
           <img
             src="./src/assets/gofundme-icon.png"
             alt="GoFundMe"
-            style={{
-              marginTop: "1rem", // Equivalent to mt-4
-              width: "2.5rem", // Equivalent to w-8
-              position: "absolute",
-              left: "1.4rem", // Equivalent to left-7
-              bottom: "460px",
-            }}
+            className="h-10 mt-6 mb-6 ml-4"
           />
         </a>
         <a
@@ -46,22 +36,16 @@ function SocialStack({ methodType }) {
           <img
             src="./src/assets/MasonM_icon.png"
             alt="Mason360"
-            style={{
-              marginTop: "1rem", // Equivalent to mt-4
-              width: "2.5rem", // Equivalent to w-8
-              position: "absolute",
-              left: "1.8rem", // Equivalent to left-7
-              bottom: "530px",
-            }}
+            className="h-10 ml-4"
           />
         </a>
-      </div>
+      </>
     );
   };
-
+  //Horizontal which lists social horizontally
   const SocialStackHorizontal = () => {
     return (
-      <div class="social-container">
+      <div className="flex">
         <a
           href="https://www.instagram.com/gmumensclubvolleyball/"
           target="_blank"
@@ -70,13 +54,7 @@ function SocialStack({ methodType }) {
           <img
             src="./src/assets/instagram-icon.png"
             alt="Instagram"
-            style={{
-              marginTop: "1rem", // Equivalent to mt-4
-              width: "2rem", // Equivalent to w-8
-              position: "absolute",
-              left: "6rem", // Equivalent to left-6
-              top: "6px",
-            }}
+            className="h-8 px-3"
           />
         </a>
         <a
@@ -87,13 +65,7 @@ function SocialStack({ methodType }) {
           <img
             src="./src/assets/gofundme-icon.png"
             alt="GoFundMe"
-            style={{
-              marginTop: "1rem", // Equivalent to mt-4
-              width: "2.5rem", // Equivalent to w-8
-              position: "absolute",
-              left: "10rem", // Equivalent to left-10
-              top: "1px",
-            }}
+            className="h-8 px-3"
           />
         </a>
         <a
@@ -104,13 +76,7 @@ function SocialStack({ methodType }) {
           <img
             src="./src/assets/MasonM_icon.png"
             alt="Mason360"
-            style={{
-              marginTop: "1rem", // Equivalent to mt-4
-              width: "2.5rem", // Equivalent to w-8
-              position: "absolute",
-              left: "14rem", // Equivalent to left-7
-              top: "-.4rem",
-            }}
+            className="h-8 px-3"
           />
         </a>
       </div>
