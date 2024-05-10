@@ -2,7 +2,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import "../styles/styles.css";
-import SocialStack from "../components/SocialStack";
+import SocialStack from "../components/Socialstack";
 
 /*
 * First page viewer sees when opening website.
