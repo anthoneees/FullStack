@@ -8,9 +8,9 @@ function Navbar({ methodType }) {
   //Navigation for landing page, does not contain socials in the navbar.
   const NavbarMain = () => {
     return (
-      <header className="flex justify-between items-center bg-secondary z-50 shadow-lg">
-        <nav className="flex ++py-0 px-6 outline">
-          <ul className="inline-flex">
+      <header className="flex items-center justify-between bg-secondary z-50 shadow-lg">
+        <nav className="outline justify-center flex flex-1">
+          <ul className="flex p-2 flex-1 mr-auto">
             <li>
               <a
                 href="/about"
@@ -37,11 +37,11 @@ function Navbar({ methodType }) {
             </li>
           </ul>
         </nav>
-        <a href="/" >
+        <a href="/">
           <img
             src="./src/assets/logo192-gold.png"
             alt="logo"
-            className="h-12 items-center justify-center outline"
+            className="h-12 items-center justify-center outline flex flex-1"
           />
         </a>
         <SocialStack methodType={"Horizontal"} />

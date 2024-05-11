@@ -45,7 +45,7 @@ function SocialStack({ methodType }) {
   //Horizontal which lists social horizontally
   const SocialStackHorizontal = () => {
     return (
-      <div className="flex px-6 items-center outline">
+      <div className="flex flex-1 px-6 items-center justify-center outline ml-auto">
         <a
           href="https://www.instagram.com/gmumensclubvolleyball/"
           target="_blank"
@@ -54,7 +54,7 @@ function SocialStack({ methodType }) {
           <img
             src="./src/assets/instagram-icon.png"
             alt="Instagram"
-            className="h-8"
+            className="h-12 p-3"
           />
         </a>
         <a
@@ -65,7 +65,7 @@ function SocialStack({ methodType }) {
           <img
             src="./src/assets/gofundme-icon.png"
             alt="GoFundMe"
-            className="h-8 px-6"
+            className="h-12 p-3"
           />
         </a>
         <a
@@ -76,7 +76,7 @@ function SocialStack({ methodType }) {
           <img
             src="./src/assets/MasonM_icon.png"
             alt="Mason360"
-            className="h-8"
+            className="h-12 p-3"
           />
         </a>
       </div>
