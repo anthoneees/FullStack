@@ -14,7 +14,7 @@ function SocialStack({ methodType }) {
           <img
             src="./src/assets/instagram-icon.png"
             alt="Instagram"
-            className="h-10 ml-4"
+            className="h-10 outline"
           />
         </a>
         <a
@@ -25,7 +25,7 @@ function SocialStack({ methodType }) {
           <img
             src="./src/assets/gofundme-icon.png"
             alt="GoFundMe"
-            className="h-10 mt-6 mb-6 ml-4"
+            className="h-10 outline"
           />
         </a>
         <a
@@ -36,7 +36,7 @@ function SocialStack({ methodType }) {
           <img
             src="./src/assets/MasonM_icon.png"
             alt="Mason360"
-            className="h-10 ml-4"
+            className="h-10 outline"
           />
         </a>
       </>
@@ -45,41 +45,9 @@ function SocialStack({ methodType }) {
   //Horizontal which lists social horizontally
   const SocialStackHorizontal = () => {
     return (
-      <div className="flex px-6 items-center outline">
-        <a
-          href="https://www.instagram.com/gmumensclubvolleyball/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            src="./src/assets/instagram-icon.png"
-            alt="Instagram"
-            className="h-8"
-          />
-        </a>
-        <a
-          href="https://www.gofundme.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            src="./src/assets/gofundme-icon.png"
-            alt="GoFundMe"
-            className="h-8 px-6"
-          />
-        </a>
-        <a
-          href="https://mason360.gmu.edu/mensvolleyball/home/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            src="./src/assets/MasonM_icon.png"
-            alt="Mason360"
-            className="h-8"
-          />
-        </a>
-      </div>
+      <>
+        
+      </>
     );
   };
 

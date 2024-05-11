@@ -2,19 +2,19 @@
 import React from "react";
 import "../styles/navbar.css";
 import "../styles/styles.css";
-import SocialStack from "./Socialstack";
 // Function that has 2 navbar consts which will be used based on which page to use it for.
-function Navbar({ methodType }) {
-  //Navigation for landing page, does not contain socials in the navbar.
-  const NavbarMain = () => {
-    return (
-      <header className="flex justify-between items-center bg-secondary z-50 shadow-lg">
-        <nav className="flex ++py-0 px-6 outline">
-          <ul className="inline-flex">
+
+//Navigation for landing page, does not contain socials in the navbar.
+const Navbar = () => {
+  return (
+    <header className="flex items-center bg-secondary z-50 shadow-lg opacity-90">
+      <div className="flex flex-1 ml-12">
+        <nav className="">
+          <ul className="nav_links flex">
             <li>
               <a
                 href="/about"
-                className="text-white p-3 hover-underline-custom inter-custom text-xl"
+                className="text-white hover-underline-custom inter-custom text-l mr-8"
               >
                 About
               </a>
@@ -22,7 +22,7 @@ function Navbar({ methodType }) {
             <li>
               <a
                 href="/events"
-                className="text-white p-3 hover-underline-custom inter-custom text-xl"
+                className="text-white hover-underline-custom inter-custom text-l mr-8"
               >
                 Events
               </a>
@@ -30,25 +30,71 @@ function Navbar({ methodType }) {
             <li>
               <a
                 href="/calendar"
-                className="text-white p-3 hover-underline-custom inter-custom text-xl"
+                className="text-white hover-underline-custom inter-custom text-l mr-8"
               >
                 Calendar
               </a>
             </li>
           </ul>
         </nav>
-        <a href="/" >
+      </div>
+
+      <div>
+        <a href="/">
           <img
             src="./src/assets/logo192-gold.png"
             alt="logo"
-            className="h-12 items-center justify-center outline"
+            className="h-12"
           />
         </a>
-        <SocialStack methodType={"Horizontal"} />
-      </header>
-    );
-  };
-  //Navigation bar for the alternate pages, contains social links in the navbar itself.
+      </div>
+
+      <div className="flex flex-1 mr-12">
+        <div className="ml-auto">
+          <a
+            href="https://www.instagram.com/gmumensclubvolleyball/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="./src/assets/instagram-icon.png"
+              alt="Instagram"
+              className="social-image h-6 ml-8"
+            />
+          </a>
+        </div>
+        <div className="">
+          <a
+            href="https://www.gofundme.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="./src/assets/gofundme-icon.png"
+              alt="GoFundMe"
+              className="social-image h-6 ml-8"
+            />
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://mason360.gmu.edu/mensvolleyball/home/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="./src/assets/MasonM_icon.png"
+              alt="Mason360"
+              className="social-image h-6 ml-8"
+            />
+          </a>
+        </div>
+      </div>
+    </header>
+  );
+};
+//Navigation bar for the alternate pages, contains social links in the navbar itself.
+/*
   const NavbarSide = () => {
     return (
       <header className="flex justify-between items-center py-6 px-[2%] bg-secondary z-50 shadow-lg opacity-90 backdrop-blur-md">
@@ -100,5 +146,5 @@ function Navbar({ methodType }) {
     </div>
   );
 }
-
+*/
 export default Navbar;
