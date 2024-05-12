@@ -19,17 +19,22 @@ function LandingPage() {
 
         <div className="h-full w-11/12">
           <div className="hero-section flex flex-col justify-center items-center">
-            <div className="flex flex-col">
-              <h1 className="inter-custom text-2xl text-tertiary text-left custom-shadow">
-                Welcome to Men's Mason Club Volleyball
+            <div className="flex flex-col custom-shadow inter-custom text-left tracking-tight">
+              <h1 className=" text-2xl text-tertiary">
+                Welcome to Mason Men's Club Volleyball
               </h1>
-              <h2 className="inter-custom text-8xl text-white text-left custom-shadow">
+              <h2 className="text-8xl text-white">
                 George Mason's
               </h2>
-              <h3 className="inter-custom text-8xl text-white text-left custom-shadow">
+              <h3 className="text-8xl text-white">
                 Volleyball Club
               </h3>
-              <h4 className="inter-custom text-8xl text-white text-left custom-shadow"></h4>
+              <h4 className="text-2xl text-customGray pt-8">
+              Empowering aspiring athletes through volleyball, fostering teamwork,
+              </h4>
+              <h5 className="text-2xl text-customGray ">
+              sportsmanship, and personal growth. 
+              </h5>
             </div>
           </div>
 

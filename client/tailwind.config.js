@@ -7,6 +7,7 @@ export default {
         primary: "#161616",
         secondary: "#13361C",
         tertiary: "#FFCC33",
+        customGray: '#BFBFBF',
       },
     },
   },
