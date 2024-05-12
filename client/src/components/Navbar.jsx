@@ -7,14 +7,14 @@ import "../styles/styles.css";
 //Navigation for landing page, does not contain socials in the navbar.
 const Navbar = () => {
   return (
-    <header className="flex items-center bg-secondary z-50 shadow-lg opacity-90">
-      <div className="flex flex-1 ml-12">
+    <header className="navbar-container flex items-center bg-secondary z-50 w-full shadow-lg opacity-90 fixed top-0 backdrop-blur-md">
+      <div className="flex flex-1">
         <nav className="">
           <ul className="nav_links flex">
             <li>
               <a
                 href="/about"
-                className="text-white hover-underline-custom inter-custom text-l mr-8"
+                className="text-white hover-underline-custom inter-custom text-l mr-8 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]"
               >
                 About
               </a>
@@ -22,7 +22,7 @@ const Navbar = () => {
             <li>
               <a
                 href="/events"
-                className="text-white hover-underline-custom inter-custom text-l mr-8"
+                className="text-white hover-underline-custom inter-custom text-l mr-8 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]"
               >
                 Events
               </a>
@@ -30,7 +30,7 @@ const Navbar = () => {
             <li>
               <a
                 href="/calendar"
-                className="text-white hover-underline-custom inter-custom text-l mr-8"
+                className="text-white hover-underline-custom inter-custom text-l mr-8 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]"
               >
                 Calendar
               </a>
@@ -49,7 +49,7 @@ const Navbar = () => {
         </a>
       </div>
 
-      <div className="flex flex-1 mr-12">
+      <div className=" flex flex-1">
         <div className="ml-auto">
           <a
             href="https://www.instagram.com/gmumensclubvolleyball/"
@@ -59,7 +59,7 @@ const Navbar = () => {
             <img
               src="./src/assets/instagram-icon.png"
               alt="Instagram"
-              className="social-image h-6 ml-8"
+              className="social-image h-6"
             />
           </a>
         </div>

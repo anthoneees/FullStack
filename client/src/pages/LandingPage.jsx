@@ -12,20 +12,33 @@ function LandingPage() {
   return (
     <>
       <Navbar />
-      <div className="landing-page backdrop-blur-sm">
-        <div className="flex justify-center items-center h-full">
-          <div className="text-center inter-custom">
-            <h1 className="text-3xl text-tertiary text-left drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
-              Welcome to Mason Club Volleyball
-            </h1>
-            <h2 className="text-8xl text-white text-left drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
-              George Mason's
-            </h2>
-            <h3 className="text-8xl text-white text-left drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
-              Volleyball Club
-            </h3>
+
+      <div className="flex w-full h-screen justify-center">
+        <div className="bg-white h-full"></div>
+
+        <div className="h-full w-11/12">
+
+          <div className="hero-section flex flex-col justify-center items-center">
+
+            <div className="flex flex-col">
+              <h1 className="inter-custom text-2xl text-tertiary text-left custom-shadow">
+                Welcome to Men's Mason Club Volleyball
+              </h1>
+              <h2 className="inter-custom text-8xl text-white text-left custom-shadow">
+                George Mason's
+              </h2>
+              <h3 className="inter-custom text-8xl text-white text-left custom-shadow">
+                Volleyball Club
+              </h3>
+              <h4 className="inter-custom text-8xl text-white text-left custom-shadow"></h4>
+            </div>
           </div>
+
+          <div className="about-section bg-gradient-to-r from-purple-500 to-pink-500 "></div>
+
         </div>
+
+        <div className="bg-white h-full"></div>
       </div>
     </>
   );

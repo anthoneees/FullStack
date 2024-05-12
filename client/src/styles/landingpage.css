@@ -1,13 +1,38 @@
-.landing-page {
+.hero-section {
   /* Set the background image */
-  background-image: url("./assets/background-image.jpg");
+  background-image: url("../assets/background-image.jpg");
   /* Ensure the image covers the entire background */
   background-size: cover;
   /* Position the image at the center */
   background-position: center;
+  background-repeat: no-repeat;
   /* Add other styles for the portion of the landing page */
-  display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  height: 100vh; /* Adjust height to fill the viewport */
+
+  height: 85vh;
+
+  -webkit-box-shadow: -1px 1px 5px 5px rgba(1, 50, 32, 0.75);
+  -moz-box-shadow: -1px 1px 5px 5px rgba(1, 50, 32, 0.75);
+  box-shadow: -1px 1px 5px 5px rgba(1, 50, 32, 0.75);
+}
+.about-section {
+  /* Set the background image */
+  background-image: url("../assets/background-image.jpg");
+  /* Ensure the image covers the entire background */
+  background-size: cover;
+  /* Position the image at the center */
+  background-position: center;
+  background-repeat: no-repeat;
+  /* Add other styles for the portion of the landing page */
+
+  height: 85vh;
+
+  -webkit-box-shadow: -1px 1px 5px 5px rgba(1, 50, 32, 0.75);
+  -moz-box-shadow: -1px 1px 5px 5px rgba(1, 50, 32, 0.75);
+  box-shadow: -1px 1px 5px 5px rgba(1, 50, 32, 0.75);
+}
+.custom-shadow {
+  --tw-drop-shadow: drop-shadow(0 1.2px 1.2px rgba(0, 0, 0, 0.8));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
+    var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate)
+    var(--tw-sepia) var(--tw-drop-shadow);
 }
