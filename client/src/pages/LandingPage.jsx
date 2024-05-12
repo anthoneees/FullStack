@@ -3,7 +3,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import "../styles/styles.css";
 import "../styles/landingpage.css";
-import Footer from "../components/Footer"
+import Footer from "../components/Footer";
 
 /*
  * First page viewer sees when opening website.
@@ -18,9 +18,7 @@ function LandingPage() {
         <div className="bg-white h-full"></div>
 
         <div className="h-full w-11/12">
-
           <div className="hero-section flex flex-col justify-center items-center">
-
             <div className="flex flex-col">
               <h1 className="inter-custom text-2xl text-tertiary text-left custom-shadow">
                 Welcome to Men's Mason Club Volleyball
@@ -35,13 +33,13 @@ function LandingPage() {
             </div>
           </div>
 
-          <div className="about-section bg-gradient-to-r from-purple-500 to-pink-500 "></div>
-
+          <div className=" about-section bg-white outline "> hey </div>
+          <div className=" about-section bg-secondary outline"> hey </div>
+          <Footer />
         </div>
 
         <div className="bg-white h-full"></div>
       </div>
-      <Footer />
     </>
   );
 }

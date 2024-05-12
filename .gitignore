@@ -1,5 +1,5 @@
-./client/node_modules
-./server/node_modules
+./client/node_modules/*
+./server/node_modules/*
 prettierc.json
 .vcsode/*
 /server/credentials.json

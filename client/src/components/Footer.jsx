@@ -1,11 +1,13 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 export class Footer extends Component {
   render() {
     return (
-      <div className='w-full bottom-0 bg-secondary'>Footer</div>
-    )
+      <footer className="bg-white text-black">
+        <div className="container mx-auto py-14 px-6">footer</div>
+      </footer>
+    );
   }
 }
 
-export default Footer
+export default Footer;
