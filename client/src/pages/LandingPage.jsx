@@ -3,6 +3,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import "../styles/styles.css";
 import "../styles/landingpage.css";
+import Footer from "../components/Footer"
 
 /*
  * First page viewer sees when opening website.
@@ -40,6 +41,7 @@ function LandingPage() {
 
         <div className="bg-white h-full"></div>
       </div>
+      <Footer />
     </>
   );
 }
