@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from "axios";
 
 const TryoutForm = () => {
   const [name, setName] = useState("");
@@ -12,12 +13,29 @@ const TryoutForm = () => {
   const [position, setPosition] = useState("Setter");
 
   const [skill, setSkill] = useState("A");
+
+  function handleSubmit(event){
+    e.preventDefault();
+
+    axios
+      .post("http://localhost:3000/api/forms", {
+        name,
+        email,
+        year,
+        height,
+        position,
+        skill,
+      })
+      .then((response) => console.log(response))
+      .catch((err) => console.log(err));
+  };
+   
   return (
     <>
       <div className="create max-w-96 m-auto text-center">
         <h2 className="text-xl mb-7">Tryout Registration Form</h2>
 
-        <form>
+        <form onSubmit={handleSubmit}>
           <label className="text-left block">Name</label>
           <input
             type="text"
@@ -83,15 +101,18 @@ const TryoutForm = () => {
             <option value="C">C</option>
           </select>
 
-          <button className="bg-secondary text-md rounded-2xl text-white mt-8 p-2 ml-4">
+          <button
+            type="submit"
+            className="bg-secondary text-md rounded-2xl text-white mt-8 p-2 ml-4"
+          >
             Submit Form
           </button>
-          <p>{ name }</p>
-          <p>{ email }</p>
-          <p>{ year }</p>
-          <p>{ height }</p>
-          <p>{ position }</p>
-          <p>{ skill }</p>
+          <p>{name}</p>
+          <p>{email}</p>
+          <p>{year}</p>
+          <p>{height}</p>
+          <p>{position}</p>
+          <p>{skill}</p>
         </form>
       </div>
     </>
