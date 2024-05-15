@@ -21,7 +21,6 @@
   z-index: -1; /* Place the pseudo-element behind other content */
 }
 .about-section {
-  height: 85vh;
 }
 .custom-shadow {
   --tw-drop-shadow: drop-shadow(0 1.2px 1.2px rgba(0, 0, 0, 0.8));
