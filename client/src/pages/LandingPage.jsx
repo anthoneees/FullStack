@@ -14,12 +14,12 @@ function LandingPage() {
     <>
       <Navbar />
 
-      <div className="flex w-full h-screen justify-center">
-        <div className="bg-white h-full"></div>
+      <div className="flex w-full justify-center">
+        <div className="bg-white"></div>
 
-        <div className="h-full w-11/12">
+        <div className=" w-11/12 custom-shadow">
           <div className="hero-section flex flex-col justify-center items-center">
-            <div className="flex flex-col custom-shadow inter-custom text-left tracking-tight">
+            <div className="flex flex-col inter-custom text-left tracking-tight">
               <h1 className=" text-2xl text-tertiary">
                 Welcome to Mason Men's Club Volleyball
               </h1>
@@ -63,7 +63,11 @@ function LandingPage() {
               </a>
             </div>
           </div>
-          <div className="  bg-white"> </div>
+          <div className="  bg-white">
+            <h1>Stay Connected</h1>
+            <h2>@MASONCLUBVOLLEYBALL</h2>
+            <div></div>
+          </div>
           <Footer />
         </div>
 

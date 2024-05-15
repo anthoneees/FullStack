@@ -1,9 +1,15 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import "../styles/styles.css"
+import "../styles/styles.css";
+import Footer from "../components/Footer";
 
 function AboutPage() {
-  return <Navbar methodType="Side" />;
+  return (
+    <>
+      <Navbar />
+      <Footer />
+    </>
+  );
 }
 
 export default AboutPage;

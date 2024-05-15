@@ -1,10 +1,6 @@
 .hero-section {
   position: relative; /* Position relative for pseudo-element */
-  height: 85vh;
-
-  -webkit-box-shadow: -1px 1px 5px 5px rgba(1, 50, 32, 0.75);
-  -moz-box-shadow: -1px 1px 5px 5px rgba(1, 50, 32, 0.75);
-  box-shadow: -1px 1px 5px 5px rgba(1, 50, 32, 0.75);
+  height: 90svh;
 }
 .hero-section::before {
   content: "";
@@ -17,14 +13,13 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  filter: blur(2px); /* Adjust the value as per your preference */
+  filter: blur(1px); /* Adjust the value as per your preference */
   z-index: -1; /* Place the pseudo-element behind other content */
 }
 .about-section {
 }
 .custom-shadow {
-  --tw-drop-shadow: drop-shadow(0 1.2px 1.2px rgba(0, 0, 0, 0.8));
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
-    var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate)
-    var(--tw-sepia) var(--tw-drop-shadow);
+  -moz-box-shadow: 3px 3px 3px #000000;
+  -webkit-box-shadow: 3px 3px 3px #000000;
+  box-shadow: 3px 3px 3px #F000000FF;
 }

@@ -4,8 +4,8 @@ import LandingPage from "./pages/LandingPage";
 import EventPage from "./pages/EventPage";
 import AboutPage from "./pages/AboutPage";
 import CalendarPage from "./pages/CalendarPage";
-import TryoutForm from "./pages/TryoutForm";
-import OpenForm from "./pages/OpenForm";
+import TryoutForm from "./components/TryoutForm";
+import OpenForm from "./components/OpenForm";
 
 function App() {
   return (
