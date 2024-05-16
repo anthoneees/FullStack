@@ -1,33 +1,14 @@
 const mongoose = require("mongoose");
 
 const TryoutSchema = new mongoose.Schema({
-  name: {
-    type: mongoose.Schema.Types.String,
-    required: true,
-  },
-  email: {
-    type: mongoose.Schema.Types.String,
-    required: true,
-    unique: true,
-  },
-  year: {
-    type: mongoose.Schema.Types.String,
-    required: true,
-  },
-  height: {
-    type: mongoose.Schema.Types.String,
-    required: true,
-  },
-  position: {
-    type: mongoose.Schema.Types.String,
-    required: true,
-  },
-  skill: {
-    type: mongoose.Schema.Types.String,
-    required: true,
-  },
+  name: String,
+  email: String,
+  year: String,
+  height: String,
+  position: String,
+  skill: String
 });
 
-const Form = mongoose.model("Forms", TryoutSchema);
+const formModel = mongoose.model("forms", TryoutSchema);
 
-module.exports = Form;
+module.exports = formModel;

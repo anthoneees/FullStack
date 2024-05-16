@@ -107,12 +107,6 @@ const TryoutForm = () => {
           >
             Submit Form
           </button>
-          <p>{name}</p>
-          <p>{email}</p>
-          <p>{year}</p>
-          <p>{height}</p>
-          <p>{position}</p>
-          <p>{skill}</p>
         </form>
       </div>
     </>
