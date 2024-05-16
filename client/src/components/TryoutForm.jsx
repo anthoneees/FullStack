@@ -14,8 +14,8 @@ const TryoutForm = () => {
 
   const [skill, setSkill] = useState("A");
 
-  function handleSubmit(event){
-    e.preventDefault();
+  function handleSubmit(event) {
+    event.preventDefault();
 
     axios
       .post("http://localhost:3000/api/forms", {
@@ -28,8 +28,8 @@ const TryoutForm = () => {
       })
       .then((response) => console.log(response))
       .catch((err) => console.log(err));
-  };
-   
+  }
+
   return (
     <>
       <div className="create max-w-96 m-auto text-center">

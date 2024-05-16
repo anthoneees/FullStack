@@ -5,6 +5,8 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const Form = require("./schemas/tryoutForm");
 app.use(express.json());
+const cors = require("cors");
+app.use(cors());
 
 mongoose
   .connect("mongodb://0.0.0.0:27017/Volleyball")
