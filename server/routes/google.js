@@ -35,7 +35,7 @@ router.post("/api/google/sheets", async (req, res) => {
 router.get("/api/google/calendar", async (req, res) => {
   const auth = new google.auth.GoogleAuth({
     keyFile: "credentials.json",
-    scopes: "https://www.googleapis.com/auth/spreadsheets",
+    scopes: "https://www.googleapis.com/auth/calendar.events.readonly",
   });
 
   //Create client instance for auth
@@ -46,17 +46,35 @@ router.get("/api/google/calendar", async (req, res) => {
 
   const calendarId = "masonclubvolleyball@gmail.com";
 
-  const response = await calendar.events.list({
-    calendarId: calendarId,
-    timeMin: new Date().toISOString(),
-    maxResults: 10,
-    singleEvents: true,
-    orderBy: "startTime",
-  });
+  const now = new Date();
+  const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1);
+  const endOfMonth = new Date(
+    now.getFullYear(),
+    now.getMonth() + 1,
+    0,
+    23,
+    59,
+    59,
+    999
+  );
 
-  const events = response.data.items;
-
-  res.status(200).json(events);
+  await calendar.events
+    .list({
+      calendarId: calendarId,
+      timeMin: startOfMonth.toISOString(),
+      showDeleted: false,
+      timeMax: endOfMonth.toISOString(),
+      singleEvents: true,
+      orderBy: "startTime",
+    })
+    .then((response) => {
+      const events = response.data.items.map((event) => ({
+        title: event.summary,
+        start: event.start.dateTime || event.start.date,
+        end: event.end.dateTime || event.end.date,
+      }));
+      res.status(200).send(events);
+    });
 });
 
 module.exports = router;
