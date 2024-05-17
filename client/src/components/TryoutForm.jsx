@@ -6,28 +6,25 @@ const TryoutForm = () => {
 
   const [email, setEmail] = useState("");
 
-  const [year, setYear] = useState("Freshman");
+  const [year, setYear] = useState("-");
 
   const [height, setHeight] = useState("");
 
-  const [position, setPosition] = useState("Setter");
+  const [position, setPosition] = useState("-");
 
-  const [skill, setSkill] = useState("A");
+  const [skill, setSkill] = useState("-");
 
   function handleSubmit(event) {
     event.preventDefault();
 
-    axios
-      .post("http://localhost:3000/api/forms", {
-        name,
-        email,
-        year,
-        height,
-        position,
-        skill,
-      })
-      .then((response) => console.log(response))
-      .catch((err) => console.log(err));
+    axios.post("http://localhost:3000/api/forms", {
+      name,
+      email,
+      year,
+      height,
+      position,
+      skill,
+    });
   }
 
   return (
@@ -60,6 +57,7 @@ const TryoutForm = () => {
             value={year}
             onChange={(e) => setYear(e.target.value)}
           >
+            <option value="-">-</option>
             <option value="Freshman">Freshman</option>
             <option value="Sophomore">Sophomore</option>
             <option value="Junior">Junior</option>
@@ -82,6 +80,7 @@ const TryoutForm = () => {
             value={position}
             onChange={(e) => setPosition(e.target.value)}
           >
+            <option value="-">-</option>
             <option value="Setter">Setter</option>
             <option value="Outside">Outside</option>
             <option value="Middle">Middle</option>
@@ -95,6 +94,7 @@ const TryoutForm = () => {
             value={skill}
             onChange={(e) => setSkill(e.target.value)}
           >
+            <option value="-">-</option>
             <option value="A">A</option>
             <option value="BB">BB</option>
             <option value="B">B</option>
