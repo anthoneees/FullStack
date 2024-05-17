@@ -1,8 +1,8 @@
 const express = require("express");
 const { mongoose } = require("mongoose");
 const cors = require("cors");
-const { formsrouter } = require("./routes/forms.js");
-const { googlerouter } = require("./routes/google.js")
+const formsrouter  = require("./routes/forms.js");
+const googlerouter = require("./routes/google.js")
 
 const app = express();
 app.use(express.json());

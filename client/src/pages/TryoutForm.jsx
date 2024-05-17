@@ -1,5 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const TryoutForm = () => {
   const [name, setName] = useState("");
@@ -14,9 +16,15 @@ const TryoutForm = () => {
 
   const [skill, setSkill] = useState("-");
 
-  function handleSubmit(event) {
-    event.preventDefault();
-
+  const handleSubmit = (e) => {
+    axios.post("http://localhost:3000/api/google/sheets", {
+      name,
+      email,
+      year,
+      height,
+      position,
+      skill,
+    });
     axios.post("http://localhost:3000/api/forms", {
       name,
       email,
@@ -25,10 +33,12 @@ const TryoutForm = () => {
       position,
       skill,
     });
-  }
+  };
 
   return (
     <>
+      <Navbar />
+      <div className="mt-20"></div>
       <div className="create max-w-96 m-auto text-center">
         <h2 className="text-xl mb-7">Tryout Registration Form</h2>
 
@@ -101,14 +111,12 @@ const TryoutForm = () => {
             <option value="C">C</option>
           </select>
 
-          <button
-            type="submit"
-            className="bg-secondary text-md rounded-2xl text-white mt-8 p-2 ml-4"
-          >
+          <button className="bg-secondary text-md rounded-2xl text-white mt-8 p-2 ml-4">
             Submit Form
           </button>
         </form>
       </div>
+      <Footer />
     </>
   );
 };

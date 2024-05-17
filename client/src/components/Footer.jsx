@@ -48,7 +48,7 @@ export class Footer extends Component {
             </div>
             <div className="">
               <a
-                href="https://www.gofundme.com/"
+                href="https://www.gofundme.com/f/help-the-gmu-mens-club-volleyball-team-make-it-to-nationals?lid=6cu29l31m2qr&utm_medium=email&utm_source=product&utm_campaign=p_email%2B4904-welcome-wp-v5"
                 target="_blank"
                 rel="noopener noreferrer"
               >
