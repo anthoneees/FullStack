@@ -17,7 +17,7 @@ const OpenForm = () => {
   const [skill, setSkill] = useState("-");
 
   const handleSubmit = (e) => {
-    axios.post("/api/google/sheets", {
+    axios.post("http://localhost:3000/api/google/sheets", {
       name,
       email,
       year,
@@ -25,7 +25,7 @@ const OpenForm = () => {
       position,
       skill,
     });
-    axios.post("/api/forms", {
+    axios.post("http://localhost:3000/api/mongo/opengym", {
       name,
       email,
       year,

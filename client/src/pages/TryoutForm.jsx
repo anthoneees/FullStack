@@ -25,7 +25,7 @@ const TryoutForm = () => {
       position,
       skill,
     });
-    axios.post("http://localhost:3000/api/forms", {
+    axios.post("http://localhost:3000/api/mongo/tryout", {
       name,
       email,
       year,

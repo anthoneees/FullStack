@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const TryoutSchema = new mongoose.Schema({
+const OpenGymSchema = new mongoose.Schema({
   name: String,
   email: String,
   year: String,
@@ -9,6 +9,6 @@ const TryoutSchema = new mongoose.Schema({
   skill: String
 });
 
-const tryoutFormModel = mongoose.model("tryout", TryoutSchema);
+const openFormModel = mongoose.model("opengym", OpenGymSchema);
 
-module.exports = tryoutFormModel;
+module.exports = openFormModel;
