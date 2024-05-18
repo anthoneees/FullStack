@@ -8,7 +8,7 @@ function CalendarPage() {
   const [eventData, setEventData] = useState(null);
 
   useEffect(() => {
-    axios.get("http://localhost:3000/api/google/calendar").then((response) => {
+    axios.get("/api/google/calendar").then((response) => {
       setEventData(response.data);
     });
   });

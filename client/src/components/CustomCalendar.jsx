@@ -20,7 +20,7 @@ const CustomCalendar = ({ events }) => {
   };
 
   return (
-    <div className="p-4 flex flex-col justify-center items-center h-screen">
+    <div className="p-4 m-4 flex flex-col justify-center items-center h-screen">
       <h2 className="text-2xl font-semibold mb-4">{currentMonthTitle}</h2>
       <div className="grid grid-cols-7 gap-2">
         {/* Weekday labels */}

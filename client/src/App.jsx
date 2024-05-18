@@ -15,8 +15,8 @@ function App() {
         <Route path="/events" element={<EventPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/calendar" element={<CalendarPage />} />
-        <Route path="/events/tryouts" element={<TryoutForm />} />
-        <Route path="/events/opengym" element={<OpenForm />} />
+        <Route path="/tryouts" element={<TryoutForm />} />
+        <Route path="/opengym" element={<OpenForm />} />
       </Routes>
     </div>
   );
