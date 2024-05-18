@@ -8,18 +8,27 @@ function CalendarPage() {
   const [eventData, setEventData] = useState(null);
 
   useEffect(() => {
-    axios.get("/api/google/calendar").then((response) => {
-      setEventData(response.data);
-    });
-  });
+    axios
+      .get("http://localhost:3000/api/google/calendar")
+      .then((response) => {
+        // Check if the response data is already an array
+        if (Array.isArray(response.data)) {
+          setEventData(response.data);
+        } else {
+          console.error("API response is not an array:", response.data);
+          setEventData([]); // Fallback to empty array
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching event data:", error);
+        setEventData([]); // Fallback to empty array
+      });
+  }, []);
 
   return (
     <>
       <Navbar />
-      <div className="mt-20"></div>
-      <div>
-        {eventData && <Calendar events={eventData} />}
-      </div>
+      <div className="m-20">{eventData && <Calendar events={eventData} />}</div>
       <Footer />
     </>
   );

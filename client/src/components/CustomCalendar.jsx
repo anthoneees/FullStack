@@ -20,7 +20,7 @@ const CustomCalendar = ({ events }) => {
   };
 
   return (
-    <div className="p-4 m-4 flex flex-col justify-center items-center h-screen">
+    <div className="p-4 flex flex-col justify-center items-center h-screen">
       <h2 className="text-2xl font-semibold mb-4">{currentMonthTitle}</h2>
       <div className="grid grid-cols-7 gap-2">
         {/* Weekday labels */}
@@ -38,13 +38,13 @@ const CustomCalendar = ({ events }) => {
           ).sort(sortByTime);
 
           return (
-            <div key={date.toDateString()} className="border border-gray-300 p-2 h-40 w-52">
+            <div key={date.toDateString()} className="border border-gray-300 p-2 h-40 w-56">
               <div className="font-semibold">{date.getDate()}</div>
               {/* Render events for this date */}
               {eventsOnDate.map((event) => (
                 <div key={event.title} className="mt-1">
-                  <div>{event.title}</div>
-                  <div>{new Date(event.start).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' })} - {new Date(event.end).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' })}</div>
+                  <div className="text-sm inter-small">{event.title}</div>
+                  <div className="text-sm inter-small">{new Date(event.start).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' })} - {new Date(event.end).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' })}</div>
                 </div>
               ))}
             </div>

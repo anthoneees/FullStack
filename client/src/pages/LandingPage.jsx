@@ -1,26 +1,41 @@
 // LandingPage.js
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import "../styles/styles.css";
 import "../styles/landingpage.css";
 import Footer from "../components/Footer";
 import InstagramPosts from "../components/InstagramPosts";
+import axios from "axios";
 
 /*
  * First page viewer sees when opening website.
  * Contains a divbar, as well as text elements acting as a welcome.
  */
 function LandingPage() {
+  const [postsData, setPostsData] = useState(null);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:3000/api/insta")
+      .then((response) => {
+        console.log("API response:", response);
+        setPostsData(response.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching Instagram posts:", error);
+      });
+  });
   return (
     <>
       <Navbar />
 
-      <div className="flex w-full justify-center">
-        <div className="bg-white"></div>
+      <div className="flex w-full justify-center relative">
+        <div className="bg-white "></div>
 
         <div className=" w-11/12 custom-shadow">
           <div className="hero-section flex flex-col justify-center items-center">
-            <div className="flex flex-col inter-custom text-left tracking-tight">
+            <div className="h-full fixed background-image"></div>
+            <div className="text-content flex flex-col inter-custom text-left tracking-tight">
               <h1 className=" text-2xl text-tertiary">
                 Welcome to Mason Men's Club Volleyball
               </h1>
@@ -36,10 +51,10 @@ function LandingPage() {
             </div>
           </div>
 
-          <div>
-            <div className=" inter-custom text-secondary py-8">
-              <h1 className ="bg-white text-4xl ml-4">About Our Program</h1>
-              <div className="h-0.5 mt-4 bg-secondary w-1/6 ml-4"></div>
+          <div className="">
+            <div className=" inter-custom text-secondary py-8 bg-white">
+              <h1 className="bg-white text-4xl ml-4 ">About Our Program</h1>
+              <div className="h-0.5 mt-4 bg-secondary w-1/6 ml-4 "></div>
               <p className="py-8 text-xl w-5/6 ml-4">
                 We are committed to ensuring that every GMU athlete has a
                 positive experience that fuels his or her love of volleyball and
@@ -50,31 +65,27 @@ function LandingPage() {
                 push beyond their comfort level and compete with confidence and
                 enthusiasm.
               </p>
-              <p className="text-xl w-5/6 ml-4">
+              <p className="text-xl w-5/6 ml-4 ">
                 The club will also provide a structure that will facilitate the
                 operation of individual teams in terms of providing practice
-                facilities, equipment, and communication. We believe all these 
-                to be necessary in delivering a safe, competitive volleyball experience 
-                for the athletes.
+                facilities, equipment, and communication. We believe all these
+                to be necessary in delivering a safe, competitive volleyball
+                experience for the athletes.
               </p>
-              <a href="/events">
+              <a href="/events" >
                 <button className="bg-secondary text-lg rounded-2xl text-white mt-8 p-1 ml-4">
                   Ready to Play?
                 </button>
               </a>
             </div>
           </div>
-          <div className="  bg-white">
-            <h1>Stay Connected</h1>
-            <h2>@MASONCLUBVOLLEYBALL</h2>
-            <InstagramPosts/>
+          <div className="bg-white">
+            {postsData && <InstagramPosts posts={postsData}/>}
           </div>
           <Footer />
         </div>
 
-        <div className="bg-white">
-          
-        </div>
+        <div className="bg-white"></div>
       </div>
     </>
   );
