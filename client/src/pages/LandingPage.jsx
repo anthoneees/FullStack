@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import "../styles/styles.css";
 import "../styles/landingpage.css";
 import Footer from "../components/Footer";
+import InstagramPosts from "../components/InstagramPosts";
 
 /*
  * First page viewer sees when opening website.
@@ -66,7 +67,7 @@ function LandingPage() {
           <div className="  bg-white">
             <h1>Stay Connected</h1>
             <h2>@MASONCLUBVOLLEYBALL</h2>
-            <div></div>
+            <InstagramPosts/>
           </div>
           <Footer />
         </div>

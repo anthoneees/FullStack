@@ -3,3 +3,5 @@
 prettierc.json
 .vcsode/*
 /server/credentials.json
+/server/.env
+.gitignore

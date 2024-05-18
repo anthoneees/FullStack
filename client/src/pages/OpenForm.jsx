@@ -40,7 +40,7 @@ const OpenForm = () => {
       <Navbar />
       <div className="mt-20"></div>
       <div className="create max-w-96 m-auto text-center">
-        <h2 className="text-xl mb-7">Tryout Registration Form</h2>
+        <h2 className="text-xl mb-7">Open Gym Registration Form</h2>
 
         <form onSubmit={handleSubmit}>
           <label className="text-left block">Name</label>
