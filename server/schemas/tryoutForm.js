@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
 
 const TryoutSchema = new mongoose.Schema({
-  name: String,
+  fname: String,
+  lname: String,
   email: String,
   year: String,
   height: String,

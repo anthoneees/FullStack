@@ -5,7 +5,7 @@ const { google } = require("googleapis");
 const router = Router();
 
 router.post("/api/google/sheets", async (req, res) => {
-  const { name, email, year, height, position, skill } = req.body;
+  const { fname, lname, email, year, height, position, skill } = req.body;
 
   const auth = new google.auth.GoogleAuth({
     keyFile: "credentials.json",
@@ -23,10 +23,10 @@ router.post("/api/google/sheets", async (req, res) => {
   await googleSheets.spreadsheets.values.append({
     auth,
     spreadsheetId,
-    range: "Sheet1!A:F",
+    range: "Sheet1!A:G",
     valueInputOption: "USER_ENTERED",
     resource: {
-      values: [[name, email, year, height, position, skill]],
+      values: [[fname, lname, email, year, height, position, skill]],
     },
   });
   console.log("success");

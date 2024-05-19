@@ -29,23 +29,23 @@ function LandingPage() {
     <>
       <Navbar />
 
-      <div className="flex w-full justify-center relative">
-        <div className="bg-white "></div>
+      <div className="flex w-full justify-center relative ">
+        <div className="bg-white pr-1 "></div>
 
         <div className=" w-11/12 custom-shadow">
           <div className="hero-section flex flex-col justify-center items-center">
             <div className="h-full fixed background-image"></div>
-            <div className="text-content flex flex-col inter-custom text-left tracking-tight">
-              <h1 className=" text-2xl text-tertiary">
+            <div className="text-content flex flex-col inter-custom text-left tracking-tight drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+              <h1 className=" text-2xl text-tertiary drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
                 Welcome to Mason Men's Club Volleyball
               </h1>
-              <h2 className="text-8xl text-white">George Mason's</h2>
-              <h3 className="text-8xl text-white">Volleyball Club</h3>
-              <h4 className="text-2xl text-customGray pt-8">
-                Empowering aspiring athletes through volleyball, fostering
+              <h2 className="text-8xl text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">George Mason's</h2>
+              <h3 className="text-8xl text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">Volleyball Club</h3>
+              <h4 className="text-2xl text-customGray pt-8 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+                Empowering student athletes through volleyball, fostering
                 teamwork,
               </h4>
-              <h5 className="text-2xl text-customGray ">
+              <h5 className="text-2xl text-customGray drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
                 sportsmanship, and personal growth.
               </h5>
             </div>
@@ -55,7 +55,7 @@ function LandingPage() {
             <div className=" inter-custom text-secondary py-8 bg-white">
               <h1 className="bg-white text-4xl ml-4 ">About Our Program</h1>
               <div className="h-0.5 mt-4 bg-secondary w-1/6 ml-4 "></div>
-              <p className="py-8 text-xl w-5/6 ml-4">
+              <p className="py-8 text-xl w-5/6 ml-4 ">
                 We are committed to ensuring that every GMU athlete has a
                 positive experience that fuels his or her love of volleyball and
                 competition. We teach our athletes the game of volleyball
@@ -85,7 +85,7 @@ function LandingPage() {
           <Footer />
         </div>
 
-        <div className="bg-white"></div>
+        <div className="bg-white pl-1 -z-10"></div>
       </div>
     </>
   );
