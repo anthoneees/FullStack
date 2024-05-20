@@ -27,7 +27,6 @@ router.get("/api/insta", async (req, res) => {
     };
 
     const posts = await fetchInstagramMedia(INSTAGRAM_API_URL, params);
-    console.log(posts)
     res.status(200).json(posts);
   } catch (error) {
     console.error("Error fetching Instagram posts:", error.message);
