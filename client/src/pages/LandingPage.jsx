@@ -54,45 +54,40 @@ function LandingPage() {
               </h5>
             </div>
           </div>
-          <div className=" mx-auto ">
-            <div className="inter-custom text-secondary py-8 bg-white">
-              <h1 className="text-4xl ml-4">Join Us</h1>
-              <div className="h-0.5 mt-4 bg-secondary w-1/6 ml-4"></div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-8">
-                <div className="flex flex-col">
-                  <img className="w-full h-60 object-cover rounded-lg mb-4 open-image" />
-                  <p className="text-xl w-5/6 ml-4">
-                    Kick off the semester with our Open Gym, held on the first
-                    Thursday of each semester from 9:30-11:30pm at the Field
-                    House. This is a great opportunity to meet the team, play
-                    some volleyball, and get a feel for our club.
-                  </p>
+          <div className="outer bg-white flex flex-col items-center py-24">
+            <h1 className="heading">Join Us</h1>
+            <div className="img-with-text flex outline py-44">
+              <div className="change flex-1 outline ml-12"></div>
+              <div className="text p-16 flex-1">
+                <h1>Our Events</h1>
+                <p>
+                  Whether you're aiming for our A team or our B team, we welcome
+                  players of all skill levels. 
+                </p>
+                <div className="events flex">
+                  <div className="open">
+                    <h1>Open Gym</h1>
+                    <p>
+                      Kick off the semester with our Open Gym, held on the first
+                      Thursday of each semester from 9:30-11:30pm at the Field
+                      House. 
+                    </p>
+                  </div>
+                  <div className="tryouts">
+                    <h1>Tryouts</h1>
+                    <p2>
+                      Ready to take the next step? Tryouts are held on the
+                      second Tuesday and Thursday of each semester, also from
+                      9:30-11:30pm at the Field House.
+                    </p2>
+                  </div>
                 </div>
-                <div className="flex flex-col">
-                  <img className="w-full h-60 object-cover rounded-lg mb-4 tryout-image" />
-                  <p className="text-xl w-5/6 ml-4">
-                    Ready to take the next step? Tryouts are held on the second
-                    Tuesday and Thursday of each semester, also from
-                    9:30-11:30pm at the Field House.
-                  </p>
-                </div>
-              </div>
-
-              <p className="text-xl w-5/6 ml-4 py-4">
-                Whether you're aiming for our A team or our B team, we welcome
-                players of all skill levels. As a member of GMU Men's Club
-                Volleyball, you'll compete at both regional and national levels,
-                experiencing the thrill of high-level play and the camaraderie
-                of a dedicated team. Don't miss your chance to be part of
-                something great!
-              </p>
-
-              <a href="/events">
+                <a href="/events">
                 <button className="bg-secondary text-lg rounded-2xl text-white mt-8 p-2 ml-4">
                   Register for Upcoming Events
                 </button>
               </a>
+              </div>
             </div>
           </div>
           <div className="">
