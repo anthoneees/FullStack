@@ -9,13 +9,13 @@ const InstagramPosts = ({ posts }) => {
 
   return (
     <>
-      <div className=" container mx-auto w-4/6 pt-8 pb-8">
+      <div className="container mx-auto w-4/6 pt-8 pb-8">
         <div className="flex flex-col items-center">
           <h1 className="text-xl text-secondary inter-small">Stay Connected</h1>
           <h2 className="text-4xl text-secondary inter-custom">
             @GMUMENSCLUBVOLLEYBALL
           </h2>
-          <div className="bg-green-600 w-2/6 h-0.5 m-4"></div>
+          <div className="bg-green-600 w-2/6 h-0.5 m-4 mb-10"></div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {posts.slice(0, visiblePosts).map((post) => (
@@ -24,20 +24,24 @@ const InstagramPosts = ({ posts }) => {
               href={post.permalink}
               target="_blank"
               rel="noopener noreferrer"
-              className="border rounded-lg overflow-hidden"
+              className="border rounded-lg overflow-hidden transform transition duration-300 hover:scale-105"
             >
               {post.media_type === "VIDEO" ? (
-                <img
-                  src={post.thumbnail_url}
-                  alt="Instagram Video Thumbnail"
-                  className="w-full h-60 object-cover"
-                />
+                <div className="relative">
+                  <img
+                    src={post.thumbnail_url}
+                    alt="Instagram Video Thumbnail"
+                    className="w-full h-60 object-cover hover:opacity-75"
+                  />
+                </div>
               ) : (
-                <img
-                  src={post.media_url}
-                  alt="Instagram Post"
-                  className="w-full h-60 object-cover"
-                />
+                <div className="relative">
+                  <img
+                    src={post.media_url}
+                    alt="Instagram Post"
+                    className="w-full h-60 object-cover hover:opacity-75"
+                  />
+                </div>
               )}
             </a>
           ))}
