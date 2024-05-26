@@ -18,7 +18,6 @@ function LandingPage() {
     axios
       .get("http://localhost:3000/api/insta")
       .then((response) => {
-        console.log("API response:", response);
         setPostsData(response.data);
       })
       .catch((error) => {
@@ -54,39 +53,55 @@ function LandingPage() {
               </h5>
             </div>
           </div>
-          <div className="outer bg-white flex flex-col items-center py-24">
-            <h1 className="heading">Join Us</h1>
-            <div className="img-with-text flex outline py-44">
-              <div className="change flex-1 outline ml-12"></div>
-              <div className="text p-16 flex-1">
-                <h1>Our Events</h1>
-                <p>
-                  Whether you're aiming for our A team or our B team, we welcome
-                  players of all skill levels. 
-                </p>
-                <div className="events flex">
-                  <div className="open">
-                    <h1>Open Gym</h1>
-                    <p>
+          <div className="bg-white flex flex-col items-center py-24">
+            <h1 className="text-4xl inter-custom text-secondary">Join Us</h1>
+            <div className="img-with-text flex">
+              <div className="events+open+tryouts p-8 flex flex-col items-center outline">
+
+
+                <div className="ourevents flex flex-col items-center pb-10">
+                  <h1 className="text-xl inter-custom">Our Events</h1>
+                  <p className="w-3/4">
+                    Whether you're aiming for our A team or our B team, we
+                    welcome players of all skill levels. As a member of GMU
+                    Men's Club Volleyball, you'll compete at both regional and
+                    national levels, experiencing the thrill of high-level play
+                    and the camaraderie of a dedicated team. Don't miss your
+                    chance to be part of something great!
+                  </p>
+                </div>
+
+
+
+                <div className="flex items-start">
+
+
+                  <div className="">
+
+
+                    <h1 className="inter-custom text-xl">Open Gym</h1>
+                    <p className="w-3/6 pt-4 inter-small">
                       Kick off the semester with our Open Gym, held on the first
                       Thursday of each semester from 9:30-11:30pm at the Field
-                      House. 
+                      House.
                     </p>
                   </div>
-                  <div className="tryouts">
-                    <h1>Tryouts</h1>
-                    <p2>
+
+                  
+                  <div className="">
+                    <h1 className="inter-custom text-xl">Tryouts</h1>
+                    <p className="w-3/6 pt-4 inter-small">
                       Ready to take the next step? Tryouts are held on the
                       second Tuesday and Thursday of each semester, also from
                       9:30-11:30pm at the Field House.
-                    </p2>
+                    </p>
                   </div>
                 </div>
                 <a href="/events">
-                <button className="bg-secondary text-lg rounded-2xl text-white mt-8 p-2 ml-4">
-                  Register for Upcoming Events
-                </button>
-              </a>
+                  <button className="bg-secondary text-lg rounded-2xl text-white mt-8 p-2 ml-4">
+                    Register for Upcoming Events
+                  </button>
+                </a>
               </div>
             </div>
           </div>
