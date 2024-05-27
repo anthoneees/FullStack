@@ -53,44 +53,34 @@ function LandingPage() {
               </h5>
             </div>
           </div>
-          <div className="bg-white flex flex-col items-center py-24">
+          <div className="bg-white flex flex-col items-center p-12">
             <h1 className="text-4xl inter-custom text-secondary">Join Us</h1>
-            <div className="img-with-text flex">
-              <div className="events+open+tryouts p-8 flex flex-col items-center outline">
-
-
-                <div className="ourevents flex flex-col items-center pb-10">
-                  <h1 className="text-xl inter-custom">Our Events</h1>
-                  <p className="w-3/4">
+            <div className="flex mt-8">
+              <div className="tryout-image flex-1 "></div>
+              <div className="p-8 flex flex-col items-center flex-1">
+                <div className="flex flex-col items-center pb-10 ">
+                  <h1 className="text-3xl inter-custom ">Our Events</h1>
+                  <p className="w-3/4 inter-small py-4">
                     Whether you're aiming for our A team or our B team, we
                     welcome players of all skill levels. As a member of GMU
                     Men's Club Volleyball, you'll compete at both regional and
-                    national levels, experiencing the thrill of high-level play
-                    and the camaraderie of a dedicated team. Don't miss your
-                    chance to be part of something great!
+                    national levels!
                   </p>
                 </div>
 
-
-
-                <div className="flex items-start">
-
-
-                  <div className="">
-
-
-                    <h1 className="inter-custom text-xl">Open Gym</h1>
-                    <p className="w-3/6 pt-4 inter-small">
+                <div className="flex pb-8">
+                  <div className="flex flex-col items-center">
+                    <h1 className="inter-custom text-xl underline">Open Gym</h1>
+                    <p className="w-5/6 pt-4 inter-small">
                       Kick off the semester with our Open Gym, held on the first
                       Thursday of each semester from 9:30-11:30pm at the Field
                       House.
                     </p>
                   </div>
 
-                  
-                  <div className="">
-                    <h1 className="inter-custom text-xl">Tryouts</h1>
-                    <p className="w-3/6 pt-4 inter-small">
+                  <div className="flex flex-col items-center">
+                    <h1 className="inter-custom text-xl underline">Tryouts</h1>
+                    <p className="w-5/6 pt-4 inter-small">
                       Ready to take the next step? Tryouts are held on the
                       second Tuesday and Thursday of each semester, also from
                       9:30-11:30pm at the Field House.
