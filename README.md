@@ -2,7 +2,7 @@
 
 ## Overview
 This website serves as the online home for **George Mason University's Men's Club Volleyball Team**, providing information on events, schedules, and team activities. It features:
-- A **landing page** with team details, events, and an Instagram feed.
+- A **landing page** with team details, events.
 - A **custom calendar** for tracking upcoming matches and tryouts.
 - **MongoDB-powered forms** for player registration and contact submissions.
 - An **about page** detailing the program's mission and structure.
@@ -14,8 +14,7 @@ This website serves as the online home for **George Mason University's Men's Clu
 &bull; Encourages player registration with accessible calls to action.  
 
 ### Custom Calendar
-&bull; Dynamically generates month views for scheduled volleyball events.  
-&bull; Allows sorting of **events by time** for better visibility.  
+&bull; Dynamically generates month views for scheduled volleyball events.   
 &bull; Styled using **Tailwind CSS** for responsive design.  
 
 ### Forms
@@ -28,3 +27,4 @@ This website serves as the online home for **George Mason University's Men's Clu
 - **Backend**: Node.js, Express.js  
 - **Database**: MongoDB  
 
+https://github.com/user-attachments/assets/1b133c7e-a14e-4295-802e-575db48cb432
