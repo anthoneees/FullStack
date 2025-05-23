@@ -41,11 +41,7 @@ const Navbar = () => {
 
       <div>
         <a href="/">
-          <img
-            src="./src/assets/logo192-gold.png"
-            alt="logo"
-            className="h-12"
-          />
+          <img src="/logo192-gold.png" alt="logo" className="h-12" />
         </a>
       </div>
 
@@ -57,7 +53,7 @@ const Navbar = () => {
             rel="noopener noreferrer"
           >
             <img
-              src="./src/assets/instagram-icon.png"
+              src="/instagram-icon.png"
               alt="Instagram"
               className="social-image h-6"
             />
@@ -70,7 +66,7 @@ const Navbar = () => {
             rel="noopener noreferrer"
           >
             <img
-              src="./src/assets/gofundme-icon.png"
+              src="/gofundme-icon.png"
               alt="GoFundMe"
               className="social-image h-6 ml-8"
             />
@@ -83,7 +79,7 @@ const Navbar = () => {
             rel="noopener noreferrer"
           >
             <img
-              src="./src/assets/MasonM_icon.png"
+              src="/MasonM_icon.png"
               alt="Mason360"
               className="social-image h-6 ml-8"
             />
