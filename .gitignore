@@ -5,3 +5,4 @@ prettierc.json
 /server/credentials.json
 /server/.env
 .gitignore
+.vercel
