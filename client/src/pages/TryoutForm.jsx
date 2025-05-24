@@ -3,6 +3,8 @@ import axios from "axios";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
+const BASE_URL = `${window.location.origin}/api`;
+
 const TryoutForm = () => {
   const [fname, setFName] = useState("");
 
@@ -131,7 +133,7 @@ const TryoutForm = () => {
     if (valid) {
       try {
         console.log("Submitting form data...");
-        axios.post("https://full-stack-two-neon.vercel.app/api/google/sheets", {
+        axios.post(`${BASE_URL}/google/sheets`, {
           fname,
           lname,
           email,
@@ -142,7 +144,7 @@ const TryoutForm = () => {
         });
         console.log("First API call successful");
 
-        axios.post("https://full-stack-two-neon.vercel.app/api/mongo/tryout", {
+        axios.post(`${BASE_URL}/mongo/tryout`, {
           fname,
           lname,
           email,

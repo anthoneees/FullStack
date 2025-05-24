@@ -14,15 +14,7 @@ dotenv.config();
 app.use(express.json());
 app.use(cors());
 
-app.use(
-  express.static(path.join(__dirname, "../client/dist"), {
-    setHeaders: (res, path) => {
-      if (path.endsWith(".js")) {
-        res.setHeader("Content-Type", "application/javascript");
-      }
-    },
-  })
-);
+app.use(express.static(path.join(__dirname, "../client/dist")));
 
 app.use(formsrouter);
 app.use(googlerouter);

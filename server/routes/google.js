@@ -1,11 +1,11 @@
 const { Router } = require("express");
 const { query } = require("express-validator");
 const { google } = require("googleapis");
+require("dotenv").config();
 
 const router = Router();
 const credential = JSON.parse(
-  Buffer.from(process.env.GOOGLE_SERVICE_KEY, "base64"),
-  toString()
+  Buffer.from(process.env.GOOGLE_SERVICE_KEY, "base64").toString()
 );
 
 router.post("/api/google/sheets", async (req, res) => {

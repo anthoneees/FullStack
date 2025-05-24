@@ -1,15 +1,16 @@
 {
+  "headers": [
+    {
+      "source": "/assets/(.*).js",
+      "headers": [{ "key": "Content-Type", "value": "application/javascript" }]
+    }
+  ],
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
   "version": 2,
   "builds": [
     {
       "src": "server/index.js",
       "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "server/index.js"
     }
   ],
   "buildCommand": "cd server && npm install && cd ../client && npm install && npm run build"
