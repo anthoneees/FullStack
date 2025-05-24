@@ -3,7 +3,7 @@
 }
 .background-image {
   background-clip: content-box;
-  background-image: url("../assets/background-image.jpg");
+  background-image: url("/background-image.jpg");
   position: fixed;
   background-size: cover;
   background-position: center;
