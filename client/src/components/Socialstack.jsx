@@ -12,7 +12,7 @@ function SocialStack({ methodType }) {
           rel="noopener noreferrer"
         >
           <img
-            src="./src/assets/instagram-icon.png"
+            src="/instagram-icon.png"
             alt="Instagram"
             className="h-10 outline"
           />
@@ -23,7 +23,7 @@ function SocialStack({ methodType }) {
           rel="noopener noreferrer"
         >
           <img
-            src="./src/assets/gofundme-icon.png"
+            src="/gofundme-icon.png"
             alt="GoFundMe"
             className="h-10 outline"
           />
@@ -33,22 +33,14 @@ function SocialStack({ methodType }) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img
-            src="./src/assets/MasonM_icon.png"
-            alt="Mason360"
-            className="h-10 outline"
-          />
+          <img src="/MasonM_icon.png" alt="Mason360" className="h-10 outline" />
         </a>
       </>
     );
   };
   //Horizontal which lists social horizontally
   const SocialStackHorizontal = () => {
-    return (
-      <>
-        
-      </>
-    );
+    return <></>;
   };
 
   return (

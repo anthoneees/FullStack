@@ -17,22 +17,22 @@
   -webkit-box-shadow: 3px 3px 3px #000000;
   box-shadow: 3px 3px 3px #F000000FF;
 }
-.open-image{
-  background-image: url("../assets/neebo.JPG");
+.open-image {
+  background-image: url("/neebo.JPG");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-clip: content-box;
 }
-.tryout-image{
-  background-image: url("../assets/Mark.JPG");
+.tryout-image {
+  background-image: url("/Mark.JPG");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-clip: content-box;
 }
-.about-image{
-  background-image: url("../assets/Mark.JPG");
+.about-image {
+  background-image: url("/Mark.JPG");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

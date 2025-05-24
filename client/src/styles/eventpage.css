@@ -1,7 +1,7 @@
 .bg-image {
   background-clip: content-box;
   position: fixed;
-  background-image: url("../assets/bg-image-events.JPG");
+  background-image: url("/bg-image-events.JPG");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

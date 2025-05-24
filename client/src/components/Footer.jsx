@@ -8,11 +8,7 @@ export class Footer extends Component {
           <div className="upper flex justify-between items-center pt-2">
             <div>
               <a href="/">
-                <img
-                  src="./src/assets/logo192-gold.png"
-                  alt="logo"
-                  className="h-12"
-                />
+                <img src="/logo192-gold.png" alt="logo" className="h-12" />
               </a>
             </div>
           </div>
@@ -25,7 +21,9 @@ export class Footer extends Component {
               <h1 className="inter-custom text-2xl pb-4">CONTACT</h1>
               <p>For more information contact our club</p>
               <a href="mailto:masonclubvolleyball@gmail.com">
-                <p className="text-blue-600 underline">masonclubvolleyball@gmail.com</p>
+                <p className="text-blue-600 underline">
+                  masonclubvolleyball@gmail.com
+                </p>
               </a>
             </div>
             <div className="flex flex-1 ">
@@ -36,7 +34,7 @@ export class Footer extends Component {
                   rel="noopener noreferrer"
                 >
                   <img
-                    src="./src/assets/instagram-icon-black.png"
+                    src="/instagram-icon-black.png"
                     alt="Instagram"
                     className="social-image h-6 px-2"
                   />
@@ -49,7 +47,7 @@ export class Footer extends Component {
                   rel="noopener noreferrer"
                 >
                   <img
-                    src="./src/assets/gofundme-icon-black.png"
+                    src="/gofundme-icon-black.png"
                     alt="GoFundMe"
                     className="social-image h-6 ml-8 px-2"
                   />
@@ -62,7 +60,7 @@ export class Footer extends Component {
                   rel="noopener noreferrer"
                 >
                   <img
-                    src="./src/assets/MasonM_icon-black.png"
+                    src="/MasonM_icon-black.png"
                     alt="Mason360"
                     className="social-image h-6 ml-8 px-2"
                   />
