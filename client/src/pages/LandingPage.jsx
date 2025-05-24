@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 import "../styles/styles.css";
 import "../styles/landingpage.css";
 import Footer from "../components/Footer";
-import InstagramPosts from "../components/InstagramPosts";
+//import InstagramPosts from "../components/InstagramPosts"; -- depreciated
 import axios from "axios";
 
 /*
@@ -14,7 +14,7 @@ import axios from "axios";
 function LandingPage() {
   const [postsData, setPostsData] = useState(null);
 
-  useEffect(() => {
+  /*useEffect(() => {
     axios
       .get("http://localhost:3000/api/insta")
       .then((response) => {
@@ -23,7 +23,7 @@ function LandingPage() {
       .catch((error) => {
         console.error("Error fetching Instagram posts:", error);
       });
-  });
+  });*/
   return (
     <>
       <Navbar />
@@ -119,10 +119,6 @@ function LandingPage() {
                 </div>
               </div>
             </div>
-          </div>
-
-          <div className="bg-white">
-            {postsData && <InstagramPosts posts={postsData} />}
           </div>
           <Footer />
         </div>

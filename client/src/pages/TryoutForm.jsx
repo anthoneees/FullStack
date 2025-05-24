@@ -131,7 +131,7 @@ const TryoutForm = () => {
     if (valid) {
       try {
         console.log("Submitting form data...");
-        axios.post("http://localhost:3000/api/google/sheets", {
+        axios.post("https://full-stack-two-neon.vercel.app/api/google/sheets", {
           fname,
           lname,
           email,
@@ -142,7 +142,7 @@ const TryoutForm = () => {
         });
         console.log("First API call successful");
 
-        axios.post("http://localhost:3000/api/mongo/tryout", {
+        axios.post("https://full-stack-two-neon.vercel.app/api/mongo/tryout", {
           fname,
           lname,
           email,

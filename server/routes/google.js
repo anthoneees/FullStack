@@ -1,17 +1,24 @@
 const { Router } = require("express");
-const { query } = require("express-validator")
+const { query } = require("express-validator");
 const { google } = require("googleapis");
 
 const router = Router();
+const credential = JSON.parse(
+  Buffer.from(process.env.GOOGLE_SERVICE_KEY, "base64"),
+  toString()
+);
 
 router.post("/api/google/sheets", async (req, res) => {
   const { fname, lname, email, year, height, position, skill } = req.body;
 
   const auth = new google.auth.GoogleAuth({
-    keyFile: "credentials.json",
-    scopes: "https://www.googleapis.com/auth/spreadsheets",
+    credentials: {
+      client_email: credential.client_email,
+      private_key: credential.private_key.replace(/\\n/g, "\n"), // Fix line breaks
+    },
+    projectId: credential.project_id,
+    scopes: ["https://www.googleapis.com/auth/spreadsheets"],
   });
-
   //Create client instance for auth
   const client = await auth.getClient();
 
@@ -34,8 +41,12 @@ router.post("/api/google/sheets", async (req, res) => {
 
 router.get("/api/google/calendar", async (req, res) => {
   const auth = new google.auth.GoogleAuth({
-    keyFile: "credentials.json",
-    scopes: "https://www.googleapis.com/auth/calendar.events.readonly",
+    credentials: {
+      client_email: credential.client_email,
+      private_key: credential.private_key.replace(/\\n/g, "\n"),
+    },
+    projectId: credential.project_id,
+    scopes: ["https://www.googleapis.com/auth/calendar.events.readonly"],
   });
 
   //Create client instance for auth

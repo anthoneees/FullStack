@@ -130,7 +130,7 @@ const OpenForm = () => {
 
     if (valid) {
       try {
-        axios.post("http://localhost:3000/api/google/sheets", {
+        axios.post("https://full-stack-two-neon.vercel.app/api/google/sheets", {
           fname,
           lname,
           email,
@@ -140,7 +140,7 @@ const OpenForm = () => {
           skill,
         });
         console.log("First API call successful");
-        axios.post("http://localhost:3000/api/mongo/opengym", {
+        axios.post("https://full-stack-two-neon.vercel.app/api/mongo/opengym", {
           fname,
           lname,
           email,
