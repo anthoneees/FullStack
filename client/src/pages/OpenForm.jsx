@@ -142,7 +142,7 @@ const OpenForm = () => {
           skill,
         });
         console.log("First API call successful");
-        axios.post(`${BASE_URL}/mongo/tryout`, {
+        axios.post(`${BASE_URL}/mongo/opengym`, {
           fname,
           lname,
           email,
