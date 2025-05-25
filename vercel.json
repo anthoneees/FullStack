@@ -1,7 +1,6 @@
 {
-  "version": 2,
-  "builds": [{ "src": "client/dist/**", "use": "@vercel/static" }],
-  "routes": [{ "src": "/(.*)", "dest": "/client/dist/index.html" }],
-  "buildCommand": "cd client && npm install && npm run build",
-  "outputDirectory": "client/dist"
+  "root": "client",
+  "buildCommand": "npm install && npm run build",
+  "outputDirectory": "dist",
+  "framework": "vite"
 }
