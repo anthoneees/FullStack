@@ -3,7 +3,7 @@ import axios from "axios";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-const BASE_URL = `${window.location.origin}/api`;
+const BASE_URL = `https://fullstack-jwrb.onrender.com/api`;
 
 const OpenForm = () => {
   const [fname, setFName] = useState("");
