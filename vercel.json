@@ -1,17 +1,12 @@
 {
-  "headers": [
-    {
-      "source": "/assets/(.*).js",
-      "headers": [{ "key": "Content-Type", "value": "application/javascript" }]
-    }
-  ],
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
   "version": 2,
   "builds": [
-    {
-      "src": "server/index.js",
-      "use": "@vercel/node"
-    }
+    { "src": "api/server.js", "use": "@vercel/node" },
+    { "src": "client/dist/**", "use": "@vercel/static" }
   ],
-  "buildCommand": "cd server && npm install && cd ../client && npm install && npm run build"
+  "routes": [
+    { "src": "/api/(.*)", "dest": "api/server.js" },
+    { "src": "/(.*)", "dest": "client/dist/index.html" }
+  ],
+  "buildCommand": "npm --prefix server install && npm --prefix client install && npm --prefix client run build"
 }
