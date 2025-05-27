@@ -1,66 +1,45 @@
-// LandingPage.js
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import "../styles/styles.css";
 import "../styles/landingpage.css";
-import Footer from "../components/Footer";
-//import InstagramPosts from "../components/InstagramPosts"; -- depreciated
-import axios from "axios";
 
-/*
- * First page viewer sees when opening website.
- * Contains a divbar, as well as text elements acting as a welcome.
- */
 function LandingPage() {
-  const [postsData, setPostsData] = useState(null);
-
-  /*useEffect(() => {
-    axios
-      .get("http://localhost:3000/api/insta")
-      .then((response) => {
-        setPostsData(response.data);
-      })
-      .catch((error) => {
-        console.error("Error fetching Instagram posts:", error);
-      });
-  });*/
   return (
     <>
       <Navbar />
 
-      <div className="flex w-full justify-center relative ">
-        <div className="bg-white pr-1 "></div>
-
-        <div className=" w-11/12 custom-shadow">
-          <div className="hero-section flex flex-col justify-center items-center">
-            <div className="h-full fixed background-image"></div>
-            <div className="text-content flex flex-col inter-custom text-left tracking-tight drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
-              <h1 className=" text-2xl text-tertiary drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+      <div className="relative w-full flex justify-center">
+        <div className="custom-shadow">
+          {/* Hero Section */}
+          <div className="hero-section flex flex-col justify-center items-center relative">
+            <div className="background-image" />
+            <div className="text-content inter-custom text-left tracking-tight drop-shadow-text">
+              <h1 className="text-xl md:text-2xl lg:text-3xl text-tertiary">
                 Welcome to Mason Men's Club Volleyball
               </h1>
-              <h2 className="text-8xl text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
-                George Mason's
-              </h2>
-              <h3 className="text-8xl text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
-                Volleyball Club
-              </h3>
-              <h4 className="text-2xl text-customGray pt-8 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+              <h2 className="text-6xl md:text-7xl lg:text-8xl text-white">George Mason's</h2>
+              <h3 className="text-6xl md:text-7xl lg:text-8xl text-white">Volleyball Club</h3>
+              <h4 className="text-lg md:text-xl lg:text-2xl text-customGray pt-8">
                 Empowering student athletes through volleyball, fostering
                 teamwork,
               </h4>
-              <h5 className="text-2xl text-customGray drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+              <h5 className="text-lg md:text-xl lg:text-2xl text-customGray">
                 sportsmanship, and personal growth.
               </h5>
             </div>
           </div>
+
+          {/* Join Section */}
           <div className="bg-white flex flex-col items-center p-12">
             <h1 className="text-4xl inter-custom text-secondary">Join Us</h1>
-            <div className="flex mt-8">
-              <div className="tryout-image flex-1 "></div>
-              <div className="p-8 flex flex-col items-center flex-1">
-                <div className="flex flex-col items-center pb-10 ">
-                  <h1 className="text-3xl inter-custom ">Our Events</h1>
-                  <p className="w-3/4 inter-small py-4">
+            <div className="flex flex-col md:flex-row mt-8 gap-6">
+              <div className="tryout-image w-full md:w-1/2 h-64 md:h-auto" />
+
+              <div className="p-8 flex flex-col items-center w-full md:w-1/2">
+                <div className="pb-10 text-center flex flex-col items-center justify-center">
+                  <h1 className="text-3xl inter-custom">Our Events</h1>
+                  <p className="w-full md:w-3/4 inter-small py-4">
                     Whether you're aiming for our A team or our B team, we
                     welcome players of all skill levels. As a member of GMU
                     Men's Club Volleyball, you'll compete at both regional and
@@ -68,62 +47,57 @@ function LandingPage() {
                   </p>
                 </div>
 
-                <div className="flex pb-8">
-                  <div className="flex flex-col items-center">
+                <div className="flex flex-col md:flex-row gap-6 pb-8">
+                  <div className="text-center flex flex-col items-center justify-center">
                     <h1 className="inter-custom text-xl underline">Open Gym</h1>
-                    <p className="w-5/6 pt-4 inter-small">
+                    <p className="w-full md:w-5/6 pt-4 inter-small">
                       Kick off the semester with our Open Gym, held on the first
-                      Thursday of each semester from 9:30-11:30pm at the Field
+                      Thursday of each semester from 9:30–11:30pm at the Field
                       House.
                     </p>
                   </div>
 
-                  <div className="flex flex-col items-center">
+                  <div className="text-center flex flex-col items-center justify-center">
                     <h1 className="inter-custom text-xl underline">Tryouts</h1>
-                    <p className="w-5/6 pt-4 inter-small">
+                    <p className="w-full md:w-5/6 pt-4 inter-small">
                       Ready to take the next step? Tryouts are held on the
                       second Tuesday and Thursday of each semester, also from
-                      9:30-11:30pm at the Field House.
+                      9:30–11:30pm at the Field House.
                     </p>
                   </div>
                 </div>
+
                 <a href="/events">
-                  <button className="bg-secondary text-lg rounded-2xl text-white mt-8 p-2 ml-4">
+                  <button className="bg-secondary text-white text-lg rounded-2xl mt-8 px-6 py-2">
                     Register for Upcoming Events
                   </button>
                 </a>
               </div>
             </div>
           </div>
-          <div className="">
-            <div className=" inter-custom text-white bg-white">
-              <div className="about-image">
-                <div className="py-20">
-                  <h1 className=" text-4xl ml-4 ">About Our Program</h1>
-                  <div className="h-0.5 mt-4 bg-white w-1/6 ml-4 "></div>
-                  <p className="py-8 text-xl w-5/6 ml-4">
-                    We are a nonprofit volleyball club that fosters a
-                    competitive and enriching environment for our 30 passionate
-                    members. Our team competes during the fall and spring
-                    semesters with two mandatory practices each week. Join us to
-                    enhance your skills, compete at regional and national
-                    levels, and be part of a dedicated and supportive community.
-                    We look forward to welcoming you to the GMU Men's Club
-                    Volleyball family!
-                  </p>
-                  <a href="/events">
-                    <button className="bg-green-900 text-lg rounded-2xl text-white mt-8 p-2 ml-4">
-                      Learn More ➞
-                    </button>
-                  </a>
-                </div>
-              </div>
+
+          {/* About Section */}
+          <div className="bg-white">
+            <div className="py-20 px-4 text-black text-center flex flex-col items-center justify-center">
+              <h1 className="text-4xl">About Our Program</h1>
+              <p className="py-8 text-xl w-full md:w-5/6">
+                We are a nonprofit volleyball club that fosters a competitive
+                and enriching environment for our 30 passionate members. Our
+                team competes during the fall and spring semesters with two
+                mandatory practices each week. Join us to enhance your skills,
+                compete at regional and national levels, and be part of a
+                dedicated and supportive community.
+              </p>
+              <a href="/events">
+                <button className="bg-green-900 text-white text-lg rounded-2xl mt-8 px-6 py-2">
+                  Learn More ➞
+                </button>
+              </a>
             </div>
           </div>
+
           <Footer />
         </div>
-
-        <div className="bg-white pl-1 -z-10"></div>
       </div>
     </>
   );

@@ -1,52 +1,91 @@
-//Navbar.js
-import React from "react";
+// Updated Navbar.js
+import React, { useState } from "react";
 import "../styles/navbar.css";
 import "../styles/styles.css";
-// Function that has 2 navbar consts which will be used based on which page to use it for.
 
-//Navigation for landing page, does not contain socials in the navbar.
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <header className="navbar-container flex items-center bg-secondary z-50 w-full shadow-lg opacity-90 fixed top-0 backdrop-blur-md">
-      <div className="flex flex-1">
-        <nav className="">
-          <ul className="nav_links flex">
-            <li>
-              <a
-                href="/about"
-                className="text-white hover-underline-custom inter-custom text-l mr-8 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]"
-              >
-                About
-              </a>
-            </li>
-            <li>
-              <a
-                href="/events"
-                className="text-white hover-underline-custom inter-custom text-l mr-8 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]"
-              >
-                Events
-              </a>
-            </li>
-            <li>
-              <a
-                href="/calendar"
-                className="text-white hover-underline-custom inter-custom text-l mr-8 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]"
-              >
-                Calendar
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+    <header className="navbar-container bg-secondary shadow-lg opacity-90 fixed top-0 backdrop-blur-md p-4 w-full z-50">
+      <div className="w-full flex items-center justify-between">
+        {/* Left: Logo */}
+        <div className="flex-shrink-0">
+          <a href="/">
+            <img src="/logo192-gold.png" alt="logo" className="h-12" />
+          </a>
+        </div>
 
-      <div>
-        <a href="/">
-          <img src="/logo192-gold.png" alt="logo" className="h-12" />
-        </a>
-      </div>
+        {/* Center: Nav links */}
+        <div
+          id="navbar-links"
+          className={`md:flex md:items-center ${isOpen ? "block" : "hidden"} w-full md:w-auto justify-center`}
+        >
+          <nav className="w-full md:w-auto flex justify-center">
+            <ul className="nav_links flex flex-col md:flex-row items-center md:space-x-8">
+              <li>
+                <a
+                  href="/about"
+                  className="text-white hover-underline-custom inter-custom text-l py-2 md:py-0"
+                >
+                  About
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/events"
+                  className="text-white hover-underline-custom inter-custom text-l py-2 md:py-0"
+                >
+                  Events
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/calendar"
+                  className="text-white hover-underline-custom inter-custom text-l py-2 md:py-0"
+                >
+                  Calendar
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
 
-      <div className=" flex flex-1">
-        <div className="ml-auto">
+        {/* Burger icon */}
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          type="button"
+          className="md:hidden inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-300 ml-auto"
+          aria-controls="navbar-links"
+          aria-expanded={isOpen}
+        >
+          <span className="sr-only">Open main menu</span>
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            {isOpen ? (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            ) : (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            )}
+          </svg>
+        </button>
+
+        {/* Right: Social icons */}
+        <div className="hidden md:flex items-center space-x-6">
           <a
             href="https://www.instagram.com/gmumensclubvolleyball/"
             target="_blank"
@@ -58,21 +97,17 @@ const Navbar = () => {
               className="social-image h-6"
             />
           </a>
-        </div>
-        <div className="">
           <a
-            href="https://www.gofundme.com/f/help-the-gmu-mens-club-volleyball-team-make-it-to-nationals?lid=6cu29l31m2qr&utm_medium=email&utm_source=product&utm_campaign=p_email%2B4904-welcome-wp-v5"
+            href="https://www.gofundme.com/f/help-the-gmu-mens-club-volleyball-team-make-it-to-nationals"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img
               src="/gofundme-icon.png"
               alt="GoFundMe"
-              className="social-image h-6 ml-8"
+              className="social-image h-6"
             />
           </a>
-        </div>
-        <div>
           <a
             href="https://mason360.gmu.edu/mensvolleyball/home/"
             target="_blank"
@@ -81,7 +116,7 @@ const Navbar = () => {
             <img
               src="/MasonM_icon.png"
               alt="Mason360"
-              className="social-image h-6 ml-8"
+              className="social-image h-6"
             />
           </a>
         </div>
@@ -89,58 +124,5 @@ const Navbar = () => {
     </header>
   );
 };
-//Navigation bar for the alternate pages, contains social links in the navbar itself.
-/*
-  const NavbarSide = () => {
-    return (
-      <header className="flex justify-between items-center py-6 px-[2%] bg-secondary z-50 shadow-lg opacity-90 backdrop-blur-md">
-        <a href="/">
-          <img
-            src="./src/assets/logo192-gold.png"
-            alt="logo"
-            className="h-12"
-          />
-        </a>
 
-        <nav className="px-5">
-          <ul className="inline-flex">
-            <li>
-              <a
-                href="/about"
-                className="text-white p-3 hover-underline-custom inter-custom text-xl"
-              >
-                About
-              </a>
-            </li>
-            <li>
-              <a
-                href="/events"
-                className="text-white p-3 hover-underline-custom inter-custom text-xl"
-              >
-                Events
-              </a>
-            </li>
-            <li>
-              <a
-                href="/calendar"
-                className="text-white p-3 hover-underline-custom inter-custom text-xl"
-              >
-                Calendar
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <SocialStack methodType={"Horizontal"} />
-      </header>
-    );
-  };
-
-  return (
-    <div>
-      {methodType == "Main" ? NavbarMain() : null}
-      {methodType == "Side" ? NavbarSide() : null}
-    </div>
-  );
-}
-*/
 export default Navbar;

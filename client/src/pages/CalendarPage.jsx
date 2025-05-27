@@ -11,24 +11,37 @@ function CalendarPage() {
     axios
       .get("http://localhost:3000/api/google/calendar")
       .then((response) => {
-        // Check if the response data is already an array
         if (Array.isArray(response.data)) {
           setEventData(response.data);
         } else {
           console.error("API response is not an array:", response.data);
-          setEventData([]); // Fallback to empty array
+          setEventData([]);
         }
       })
       .catch((error) => {
         console.error("Error fetching event data:", error);
-        setEventData([]); // Fallback to empty array
+        setEventData([]);
       });
   }, []);
 
   return (
     <>
       <Navbar />
-      <div className="m-20">{eventData && <Calendar events={eventData} />}</div>
+
+      {/* Main content wrapper with responsive spacing */}
+      <main className="px-4 py-10 md:px-20 md:py-16 min-h-screen bg-gray-50">
+        <h1 className="text-2xl inter-custom text-center text-secondary mb-8">
+          Calendar
+        </h1>
+
+        {/* Responsive scrollable calendar container */}
+        <div className="overflow-x-auto">
+          <div className="min-w-[600px]">
+            {eventData && <Calendar events={eventData} />}
+          </div>
+        </div>
+      </main>
+
       <Footer />
     </>
   );

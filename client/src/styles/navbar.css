@@ -6,7 +6,7 @@
   color: #ffcc33;
 }
 
-.navbar-container {
-  padding-left: calc((100vw - 95vw) / 2); /* Calculate left padding */
-  padding-right: calc((100vw - 95vw) / 2); /* Calculate right padding */
-}
+/* .navbar-container {
+  padding-left: calc((100vw - 95vw) / 2); 
+  padding-right: calc((100vw - 95vw) / 2); 
+} */

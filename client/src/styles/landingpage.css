@@ -1,60 +1,59 @@
 .hero-section {
   height: 90svh;
+  position: relative;
 }
+
 .background-image {
-  background-clip: content-box;
   background-image: url("/background-image.jpg");
-  position: fixed;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 90svh;
-  z-index: -20;
-  width: 92%;
+  background-clip: border-box;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
 }
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .background-image {
+    height: 75vh; /* Adjust height for smaller screens */
+    position: absolute;
+  }
+}
+
+@media (min-width: 768px) {
+  .background-image {
+    height: 100vh; /* Ensure full viewport coverage on larger screens */
+    position: fixed;
+  }
+}
+
 .custom-shadow {
-  -moz-box-shadow: 3px 3px 3px #000000;
-  -webkit-box-shadow: 3px 3px 3px #000000;
-  box-shadow: 3px 3px 3px #F000000FF;
+  box-shadow: 3px 3px 3px #000000;
 }
+
+.tryout-image,
+.about-image,
 .open-image {
-  background-image: url("/neebo.JPG");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-clip: content-box;
 }
+
 .tryout-image {
   background-image: url("/Mark.JPG");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-clip: content-box;
 }
+
 .about-image {
   background-image: url("/Mark.JPG");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-clip: content-box;
-}
-.text-container {
-  position: relative;
-  z-index: 1;
-  padding: 20px; /* Add padding to create a solid background */
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.8
-  ); /* Set a semi-transparent white background */
 }
 
-.text-content {
-  color: black; /* Adjust text color as needed */
+.open-image {
+  background-image: url("/neebo.JPG");
 }
 
-.about-section {
-  background-color: white;
-  padding: 20px; /* Add padding to create a solid background */
+.drop-shadow-text {
+  text-shadow: 0 1.2px 1.2px rgba(0, 0, 0, 0.8);
 }
