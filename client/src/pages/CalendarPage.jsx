@@ -9,7 +9,7 @@ function CalendarPage() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/google/calendar")
+      .get("https://fullstack-jwrb.onrender.com/api/google/calendar")
       .then((response) => {
         if (Array.isArray(response.data)) {
           setEventData(response.data);
