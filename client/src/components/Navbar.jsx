@@ -7,7 +7,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="navbar-container bg-secondary shadow-lg opacity-90 fixed top-0 backdrop-blur-md p-4 w-full z-50">
+    <header className="navbar-container bg-secondary shadow-lg opacity-90 fixed top-0 backdrop-blur-md w-full z-50">
       <div className="w-full flex items-center justify-between">
         {/* Left: Logo */}
         <div className="flex-shrink-0">
